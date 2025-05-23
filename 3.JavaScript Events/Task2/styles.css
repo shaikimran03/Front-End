@@ -1,0 +1,43 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-top: 50px;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+/* Input Box Styling */
+input {
+    padding: 8px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+button:hover {
+    background: #218838;
+}

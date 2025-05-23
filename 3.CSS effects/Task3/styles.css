@@ -1,0 +1,52 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 300px; /* Extra space for scrolling */
+    text-align: center;
+}
+
+.box {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Static Position (Default) */
+.static {
+    background-color: #007bff;
+    position: static; /* Default, follows normal flow */
+}
+
+/* Relative Position */
+.relative {
+    background-color: #28a745;
+    position: relative; /* Moves relative to itself */
+    left: 30px; /* Moves 30px right */
+}
+
+/* Fixed Position */
+.fixed {
+    background-color: #dc3545;
+    position: fixed; /* Stays fixed on screen */
+    top: 10px;
+    right: 10px;
+}
+
+/* Absolute Position */
+.absolute {
+    background-color: #ffc107;
+    position: absolute; /* Positions relative to first parent with position */
+    top: 100px;
+    left: 50px;
+}
+
+/* Sticky Position */
+.sticky {
+    background-color: #17a2b8;
+    position: sticky; /* Sticks when scrolling */
+    top: 20px;
+}

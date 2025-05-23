@@ -1,0 +1,53 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Animated Box */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    margin: auto;
+    border-radius: 10px;
+    animation-name: bounceEffect; /* Animation name */
+    animation-duration: 2s; /* Animation duration */
+    animation-iteration-count: infinite; /* Infinite loop */
+    animation-delay: 1s; /* Delay before animation starts */
+}
+
+/* Define Animation */
+@keyframes bounceEffect {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Pagination Container */
+.pagination {
+    margin-top: 20px;
+}
+
+/* Pagination Items */
+.page {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px; /* Spaces between items */
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hoverable Pagination */
+.page:hover {
+    background: #0056b3;
+}
+
+/* Pagination Without Spaces */
+.pagination.no-space .page {
+    margin: 0; /* Removes spaces */
+}

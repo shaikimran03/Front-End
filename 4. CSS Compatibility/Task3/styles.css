@@ -1,0 +1,39 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-top: 20px;
+}
+
+/* Simple Grid */
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.simple-grid div {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Auto-Responsive Grid */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusts based on screen */
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.responsive-grid div {
+    background: #28a745;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+<!--3. Program to apply animations to ng-show and ng-hide. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Animations with ng-show & ng-hide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="AnimationController">
+
+    <h2>AngularJS Animated Show & Hide Example</h2>
+
+    <!-- Toggle Button -->
+    <button ng-click="toggleMessage()">Toggle Message</button>
+
+    <!-- Message with ng-show -->
+    <div class="animated-box" ng-show="isVisible">
+        <p>✨ Hello! This text appears with animation when toggled.</p>
+    </div>
+
+    <!-- Message with ng-hide -->
+    <div class="animated-box" ng-hide="isVisible">
+        <p>💨 This text disappears smoothly when toggled.</p>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

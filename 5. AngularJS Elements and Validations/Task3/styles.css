@@ -1,0 +1,40 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Animated Content */
+.animated-box {
+    width: 300px;
+    padding: 15px;
+    margin: 20px auto;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Applying Animations for ng-show */
+.animated-box.ng-hide-remove {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Applying Animations for ng-hide */
+.animated-box.ng-hide-add {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Keyframes for Smooth Transition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
+}

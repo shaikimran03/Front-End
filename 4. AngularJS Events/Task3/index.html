@@ -1,0 +1,27 @@
+<!--3. Program that performs various events using ng-click, ng-mousemove and $event. 
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Events Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="EventController">
+
+    <h2>AngularJS Events Demonstration</h2>
+
+    <!-- Click Event -->
+    <button ng-click="showAlert()">Click Me</button>
+
+    <!-- Mousemove Event -->
+    <div class="hover-box" ng-mousemove="trackMouse($event)">
+        <p>Move the cursor inside this box</p>
+        <p>X: {{ mouseX }}, Y: {{ mouseY }}</p>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

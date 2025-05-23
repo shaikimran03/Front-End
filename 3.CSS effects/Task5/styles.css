@@ -1,0 +1,10 @@
+.transparent-image {
+    width: 100px; /* Adjust image size */
+    opacity: 0.5; /* 50% transparent */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect */
+.transparent-image:hover {
+    opacity: 1; /* Fully visible when hovered */
+}

@@ -1,0 +1,58 @@
+<!--2. Create a select element with some options. Spot the difference between ng-options 
+and ng-repeat by using both inside the program.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dropdown - ng-options vs ng-repeat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="DropdownController">
+
+    <h2>Select a Country</h2>
+
+    <!-- Using ng-options -->
+    <label for="countrySelect">Using ng-options:</label>
+    <select id="countrySelect" ng-model="selectedCountry" ng-options="country for country in countries">
+        <option value="">--Select a Country--</option> 
+    </select>
+    <p>Selected Country: {{ selectedCountry }}</p>
+
+    <!-- Using ng-repeat -->
+    <label for="repeatSelect">Using ng-repeat:</label>
+    <select id="repeatSelect" ng-model="selectedCountryRepeat">
+        <option value="">--Select a Country--</option> 
+        <option ng-repeat="country in countries" value="{{country}}">{{country}}</option>
+    </select>
+    <p>Selected Country (ng-repeat): {{ selectedCountryRepeat }}</p>
+
+    <script>
+        const app = angular.module("myApp", []);
+        app.controller("DropdownController", function($scope) {
+            $scope.countries = ["India", "USA", "UK", "Canada"];
+        });
+    </script>
+
+</body>
+</html>
+<!-- In AngularJS, both ng-options and ng-repeat can be used to populate a <select> dropdown, but they work differently.
+ 
+ The key difference between ng-options and ng-repeat when used in a <select> element is:
+
+Performance Optimization:
+
+ng-options is more efficient and optimized for dropdowns. It doesn't create unnecessary extra DOM elements.
+
+ng-repeat generates multiple <option> elements, which can sometimes lead to performance issues, especially in large datasets.
+
+Binding Values:
+
+ng-options binds the selected value properly and works well with ng-model.
+
+ng-repeat requires manual binding, and sometimes selecting a value doesn't work correctly.
+
+Extra Elements Issue:
+
+ng-repeat adds an additional blank <option> element by default, which may cause unexpected behavior.   
+    ng-options avoids this problem and keeps the dropdown clean.-->

@@ -1,0 +1,59 @@
+<!--1. Create a table and recieve the contents from JSON file, sort it using filters. Show the 
+usage of $index, $odd and $even. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Table Sorting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .odd-row { background-color: #f2f2f2; }
+        .even-row { background-color: #ffffff; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid black; text-align: center; }
+        th { cursor: pointer; background-color: #ddd; }
+    </style>
+</head>
+<body ng-controller="TableController">
+
+    <h2>JSON Table with Sorting</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th ng-click="sortData('name')">Name</th>
+                <th ng-click="sortData('age')">Age</th>
+                <th ng-click="sortData('country')">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in people | orderBy:sortKey" 
+                ng-class="{'odd-row': $odd, 'even-row': $even}">
+                <td>{{$index + 1}}. {{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.country}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const app = angular.module("myApp", []);
+        app.controller("TableController", function($scope, $http) {
+            $scope.sortKey = 'name';
+
+            // Fetch JSON data
+            $http.get("data.json").then(response => {
+                $scope.people = response.data;
+            });
+
+            // Sorting function
+            $scope.sortData = function(key) {
+                $scope.sortKey = key;
+            };
+        });
+    </script>
+
+</body>
+</html>
+

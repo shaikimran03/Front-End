@@ -1,0 +1,29 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+/* Fixed Layout - Column width is constant */
+.fixed-table {
+    table-layout: fixed;
+}
+
+/* Auto Layout - Column width adjusts dynamically */
+.auto-table {
+    table-layout: auto; /* or none (same behavior) */
+}

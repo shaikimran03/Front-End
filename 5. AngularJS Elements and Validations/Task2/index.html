@@ -1,0 +1,43 @@
+<!--2. Validate the form using required and email. Also apply a custom validation. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Form Validation with Custom Rules</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="FormController">
+
+    <h2>AngularJS Form with Required, Email & Custom Validation</h2>
+
+    <form name="userForm" novalidate>
+        <!-- Username (Custom Validation: Min 5 characters) -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" ng-model="user.username" ng-minlength="5" required>
+        <p class="error fade-in" ng-show="userForm.username.$error.required">Username is required!</p>
+        <p class="error fade-in" ng-show="userForm.username.$error.minlength">Username must be at least 5 characters!</p>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" ng-model="user.email" required>
+        <p class="error fade-in" ng-show="userForm.email.$error.required">Email is required!</p>
+        <p class="error fade-in" ng-show="userForm.email.$error.email">Enter a valid email address!</p>
+
+        <!-- Submit Button -->
+        <button type="submit" ng-disabled="userForm.$invalid">Submit</button>
+    </form>
+
+    <h3>Form Data Preview</h3>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+
+</body>
+<script>
+    const app = angular.module("myApp", []);
+    app.controller("FormController", function($scope) {
+        $scope.user = {}; // Initialize user data
+    });
+</script>
+</html>

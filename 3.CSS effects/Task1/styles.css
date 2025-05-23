@@ -1,0 +1,55 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Container to center elements */
+.container {
+    text-align: center;
+}
+.image-box img {
+    width: 300px; /* Sets the image width to 100px */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+
+/* Image box with shadow effect */
+.image-box {
+    display: inline-block;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for image box */
+.image-box:hover {
+    transform: scale(1.05); /* Slightly enlarges image on hover */
+}
+
+/* Button with hover effect */
+.shadow-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for button */
+.shadow-button:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); /* Adds a deeper shadow */
+    background: #0056b3; /* Changes color */
+}

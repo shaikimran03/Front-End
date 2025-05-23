@@ -1,0 +1,32 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav a {
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: #0056b3;
+}
+
+/* Route Content */
+ng-view {
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}

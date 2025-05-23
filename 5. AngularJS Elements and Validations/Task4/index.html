@@ -1,0 +1,29 @@
+<!--4. Program to show routing using ng-route. Also include $routeProvider and otherwise() 
+into your program. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Routing Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>AngularJS Routing Example</h2>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#!home">Home</a>
+        <a href="#!about">About</a>
+        <a href="#!contact">Contact</a>
+    </nav>
+
+    <!-- Route Content -->
+    <div ng-view></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

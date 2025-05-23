@@ -1,0 +1,45 @@
+<!--1. Fetch the data from mysql database table to AngularJS program.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch MySQL Data in AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="UserController">
+
+    <h2>Users Data</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const app = angular.module("myApp", []);
+        app.controller("UserController", function($scope, $http) {
+            $http.get("http://localhost:3000/users")
+                .then(response => {
+                    $scope.users = response.data;
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        });
+    </script>
+
+</body>
+</html>

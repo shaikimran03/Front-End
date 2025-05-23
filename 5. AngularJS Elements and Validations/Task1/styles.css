@@ -1,0 +1,86 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Animated Form */
+form {
+    display: inline-block;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Input & Select Styling */
+input, select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+}
+
+/* Error Message with Fade-in Effect */
+.error {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shake Animation for Invalid Input */
+.shake {
+    animation: shakeEffect 0.3s ease-in-out;
+}
+
+@keyframes shakeEffect {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Hover Effect for Checkbox Label */
+.hover-highlight:hover {
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Submit Button */
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #ccc;
+}

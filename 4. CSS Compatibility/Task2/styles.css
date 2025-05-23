@@ -1,0 +1,46 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-top: 50px;
+}
+
+/* Animated List */
+.animated-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+}
+
+/* List Item Styling */
+.animated-list li {
+    font-size: 20px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    margin: 8px auto;
+    width: 200px;
+    border-radius: 5px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animation Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay each list item's animation */
+.animated-list li:nth-child(1) { animation-delay: 0.2s; }
+.animated-list li:nth-child(2) { animation-delay: 0.4s; }
+.animated-list li:nth-child(3) { animation-delay: 0.6s; }
+.animated-list li:nth-child(4) { animation-delay: 0.8s; }
+.animated-list li:nth-child(5) { animation-delay: 1s; }

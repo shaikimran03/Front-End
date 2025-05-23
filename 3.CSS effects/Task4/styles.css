@@ -1,0 +1,29 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Scrollable Box */
+.scroll-box {
+    width: 300px;
+    height: 150px;
+    padding: 15px;
+    background: #f0f0f0;
+    border: 2px solid #333;
+    overflow: scroll; /* Enables scrolling when content exceeds the box */
+}
+
+/* Optional: Hide Scrollbars */
+.scroll-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

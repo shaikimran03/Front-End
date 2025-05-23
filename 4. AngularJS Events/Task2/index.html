@@ -1,0 +1,47 @@
+<!-- 
+2. What is DOM(Document Object Model). Use ng-show, ng-hide and ng-disabled into 
+your program. -->
+<!--What is DOM (Document Object Model)?
+The Document Object Model (DOM) is a programming interface that represents the structure of an HTML document as a tree-like model. It allows JavaScript and other scripts to dynamically update, manipulate, and interact with HTML elements.
+
+In the DOM:
+
+Every HTML element is treated as an object.
+
+The document structure is represented as a tree where elements can be accessed, modified, or removed dynamically.
+
+Methods like getElementById(), querySelector(), and addEventListener() help manipulate elements efficiently.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS ng-show, ng-hide & ng-disabled</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="DemoController">
+
+    <h2>AngularJS - DOM Manipulation with ng-show, ng-hide, and ng-disabled</h2>
+
+    <!-- Input field and button -->
+    <label for="textInput">Enter Text:</label>
+    <input type="text" id="textInput" ng-model="userText">
+    
+    <!-- Button disabled when input is empty -->
+    <button ng-disabled="!userText">Submit</button>
+
+    <!-- Message Visibility Using ng-show -->
+    <p ng-show="userText">You entered: {{ userText }}</p>
+
+    <!-- Message Visibility Using ng-hide -->
+    <p ng-hide="userText">Please enter something to see the result.</p>
+
+    <script>
+        const app = angular.module("myApp", []);
+        app.controller("DemoController", function($scope) {
+            $scope.userText = "";
+        });
+    </script>
+
+</body>
+</html>

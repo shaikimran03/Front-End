@@ -1,0 +1,61 @@
+<!--1. Include different form elements into your program like textbox, selectbox, checkbox 
+and radiobutton. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Form with Animations & Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="FormController">
+
+    <h2>Animated Form with Interactive Effects</h2>
+
+    <form name="userForm" novalidate>
+        <!-- Textbox with animation -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="user.name" required ng-class="{ 'shake': userForm.name.$invalid }">
+        <p ng-show="userForm.name.$error.required" class="error">Name is required!</p>
+
+        <!-- Select Box with transition -->
+        <label for="country">Select Country:</label>
+        <select id="country" ng-model="user.country" required>
+            <option value="">--Select--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <p ng-show="userForm.country.$error.required" class="error fade-in">Country is required!</p>
+
+        <!-- Checkbox with hover effect -->
+        <label>
+            <input type="checkbox" ng-model="user.subscribe"> <span class="hover-highlight">Subscribe to Newsletter</span>
+        </label>
+
+        <!-- Radio Buttons with smooth transitions -->
+        <label>Gender:</label>
+        <label><input type="radio" ng-model="user.gender" value="Male"> Male</label>
+        <label><input type="radio" ng-model="user.gender" value="Female"> Female</label>
+
+        <br>
+
+        <!-- Submit Button with dynamic effects -->
+        <button type="submit" ng-disabled="userForm.$invalid">Submit</button>
+    </form>
+
+    <h3>Form Data</h3>
+    <p>Name: {{ user.name }}</p>
+    <p>Country: {{ user.country }}</p>
+    <p>Subscribed: {{ user.subscribe ? 'Yes' : 'No' }}</p>
+    <p>Gender: {{ user.gender }}</p>
+
+</body>
+<script>
+    const app = angular.module("myApp", []);
+    app.controller("FormController", function($scope) {
+        $scope.user = {}; // Initialize form data
+    });
+</script>
+</html>
