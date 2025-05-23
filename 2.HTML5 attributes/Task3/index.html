@@ -1,0 +1,53 @@
+<!--3. Apply all of the below input restrictions 
+disabled, max, maxlength, min, readonly, required, size, value -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Restrictions Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Input Restrictions Form</h2>
+        <form action="#" method="POST">
+            
+            <!-- Disabled Input -->
+            <label for="disabled">Disabled Field:</label>
+            <input type="text" id="disabled" name="disabled" value="Cannot edit" disabled>
+
+            <!-- Max Value Restriction -->
+            <label for="max">Enter a Number (Max 100):</label>
+            <input type="number" id="max" name="max" max="100" placeholder="Pick a number">
+
+            <!-- Maxlength Restriction -->
+            <label for="maxlength">Enter a Username (Max 10 characters):</label>
+            <input type="text" id="maxlength" name="maxlength" maxlength="10" placeholder="Max 10 characters">
+
+            <!-- Min Value Restriction -->
+            <label for="min">Enter a Number (Min 10):</label>
+            <input type="number" id="min" name="min" min="10" placeholder="Pick a number">
+
+            <!-- Readonly Input -->
+            <label for="readonly">Readonly Field:</label>
+            <input type="text" id="readonly" name="readonly" value="Read-only value" readonly>
+
+            <!-- Required Input -->
+            <label for="required">Required Field:</label>
+            <input type="text" id="required" name="required" placeholder="Must enter something" required>
+
+            <!-- Size Attribute -->
+            <label for="size">Small Sized Input:</label>
+            <input type="text" id="size" name="size" size="5" placeholder="5 chars">
+
+            <!-- Value Attribute -->
+            <label for="value">Predefined Value:</label>
+            <input type="text" id="value" name="value" value="Default Text">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--2. Program with various services like $location, $http, $timeout etc. and also use 
+custom service.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Services Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #data {
+      background-color: #eef;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body ng-controller="MainCtrl">
+
+  <h2>AngularJS Built-in and Custom Services</h2>
+
+  <h3>$location Service</h3>
+  <p>Current URL Path: {{ path }}</p>
+
+  <h3>$timeout Service</h3>
+  <p>{{ timeoutMessage }}</p>
+
+  <h3>$http Service</h3>
+  <p>Data loaded from JSON file:</p>
+  <div id="data">
+    <ul>
+      <li ng-repeat="item in items">{{ item }}</li>
+    </ul>
+  </div>
+
+  <h3>Custom Service</h3>
+  <p>{{ customMessage }}</p>
+
+</body>
+</html>

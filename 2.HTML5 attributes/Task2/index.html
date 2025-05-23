@@ -1,0 +1,60 @@
+<!--2. HTML5 input Types 
+type=number, range, color, date, file, time, month, week, email -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>HTML5 Input Types</h2>
+        <form action="#" method="POST">
+            
+            <!-- Number Input -->
+            <label for="number">Enter a Number:</label>
+            <input type="number" id="number" name="number" min="1" max="100" placeholder="Pick a number">
+
+            <!-- Range Input with Display -->
+            <label for="range">Adjust Range (0-100):</label>
+            <input type="range" id="range" name="range" min="0" max="100" value="50" oninput="updateRangeValue(this.value)">
+            <span id="rangeValue">50</span>
+
+            <!-- Color Picker -->
+            <label for="color">Pick a Color:</label>
+            <input type="color" id="color" name="color">
+
+            <!-- Date Picker -->
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date">
+
+            <!-- File Upload -->
+            <label for="file">Upload a File:</label>
+            <input type="file" id="file" name="file">
+
+            <!-- Time Picker -->
+            <label for="time">Pick a Time:</label>
+            <input type="time" id="time" name="time">
+
+            <!-- Month Picker -->
+            <label for="month">Select a Month:</label>
+            <input type="month" id="month" name="month">
+
+            <!-- Week Picker -->
+            <label for="week">Select a Week:</label>
+            <input type="week" id="week" name="week">
+
+            <!-- Email Input -->
+            <label for="email">Enter Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

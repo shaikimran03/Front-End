@@ -1,0 +1,42 @@
+<!--       
+1. Program to apply various filters like date, uppercase, lowercase, number etc. and 
+also apply a custom filter. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Filters Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 6px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: #333;
+    }
+  </style>
+</head>
+<body ng-controller="FilterCtrl">
+
+  <h2>AngularJS Filters Example</h2>
+
+  <!-- Text input bound to a model -->
+  <label>Enter some text:</label><br>
+  <input type="text" ng-model="sampleText"><br><br>
+
+  <h3>Built-in Filters:</h3>
+  <p>Original: {{ sampleText }}</p>
+  <p>Uppercase: {{ sampleText | uppercase }}</p>
+  <p>Lowercase: {{ sampleText | lowercase }}</p>
+
+  <h3>Date Filter:</h3>
+  <p>Today: {{ today | date:'fullDate' }}</p>
+  <p>Time: {{ today | date:'shortTime' }}</p>
+
+  <h3>Number Filter:</

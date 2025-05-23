@@ -1,0 +1,49 @@
+<!--$scope	The object that binds data between the controller and the view. Each controller has its own scope.
+$rootScope	A special scope object that is available globally across all controllers. There is only one $rootScope per application.-->
+<!DOCTYPE html>
+<html ng-app="myApp"> <!-- Initialize AngularJS app -->
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS $scope and $rootScope Example</title>
+
+    <!-- Load AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+    <!-- Controller 1 using its own scope -->
+    <div ng-controller="FirstController">
+        <h2>First Controller</h2>
+        <p><strong>Message from First Controller ($scope):</strong> {{ message }}</p>
+        <p><strong>Global Message ($rootScope):</strong> {{ globalMessage }}</p>
+    </div>
+
+    <hr>
+
+    <!-- Controller 2 using different scope -->
+    <div ng-controller="SecondController">
+        <h2>Second Controller</h2>
+        <p><strong>Message from Second Controller ($scope):</strong> {{ message }}</p>
+        <p><strong>Global Message ($rootScope):</strong> {{ globalMessage }}</p>
+    </div>
+
+    <!-- AngularJS Script -->
+    <script>
+        // Define the AngularJS module
+        var app = angular.module('myApp', []);
+
+        // First Controller - defines its own $scope and accesses $rootScope
+        app.controller('FirstController', function($scope, $rootScope) {
+            $scope.message = "Hello from First Controller"; // Local to this controller
+            $rootScope.globalMessage = "This is a global message using $rootScope"; // Shared across controllers
+        });
+
+        // Second Controller - also defines its own $scope
+        app.controller('SecondController', function($scope) {
+            $scope.message = "Hello from Second Controller"; // Local to this controller
+            // $rootScope.globalMessage is automatically available since it's global
+        });
+    </script>
+
+</body>
+</html>

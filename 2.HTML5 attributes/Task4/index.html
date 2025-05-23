@@ -1,0 +1,36 @@
+<!--4. Develop a web page using target attribute. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Attribute Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Using the Target Attribute</h2>
+
+        <!-- Link Examples -->
+        <p><strong>Click the links to see the target attribute in action:</strong></p>
+        <a href="https://www.example.com" target="_blank">Open in New Tab</a> <br>
+        <a href="https://www.example.com" target="_self">Open in Same Tab</a> <br>
+        <a href="https://www.example.com" target="_parent">Open in Parent Frame</a> <br>
+        <a href="https://www.example.com" target="_top">Open in Full Window</a>
+
+        <hr>
+
+        <!-- Form Example -->
+        <h3>Submit a Form</h3>
+        <form action="https://www.example.com" method="POST" target="_blank">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

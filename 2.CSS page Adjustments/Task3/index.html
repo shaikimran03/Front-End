@@ -1,0 +1,100 @@
+<!--- A long page which should have two links "click to go to bottom of page" and "click to go to top of page" . Also set their scroll-behavior to scroll smoothly.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Smoothly Web Page</title>
+    <style>
+        /* Apply smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        /* Styling for navigation links */
+        .scroll-links {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .scroll-links a {
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-links a:hover {
+            background-color: #555;
+        }
+
+        /* Creates long content to allow scrolling */
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 50px;
+            background: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer section for bottom scrolling */
+        #bottom {
+            padding: 50px;
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation links to scroll up & down -->
+    <div class="scroll-links">
+        <a href="#bottom">Click to go to bottom of page</a>
+        <a href="#top">Click to go to top of page</a>
+    </div>
+
+    <h1 id="top">Smooth Scrolling Web Page</h1>
+
+    <!-- Long content sections -->
+    <div class="content">
+        <div class="section">Section 1: Welcome! This is a long page...</div>
+        <div class="section">Section 2: Keep scrolling down...</div>
+        <div class="section">Section 3: Still more to see...</div>
+        <div class="section">Section 4: You're halfway through...</div>
+        <div class="section">Section 5: Keep going, almost there...</div>
+        <div class="section">Section 6: Lots of content here...</div>
+        <div class="section">Section 7: Just a bit more...</div>
+        <div class="section">Section 8: Almost at the end...</div>
+        <div class="section">Section 9: One more section to go...</div>
+        <div class="section">Section 10: You made it!</div>
+    </div>
+
+    <!-- Bottom section to scroll down to -->
+    <div id="bottom">
+        <h2>Bottom of the Page</h2>
+        <p>Now you can click the link to go back to the top!</p>
+    </div>
+
+</body>
+</html>

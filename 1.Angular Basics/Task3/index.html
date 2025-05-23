@@ -1,0 +1,64 @@
+<!--3. Write a program to bind the data using ng-model directive. Use ng-init, ng-repeat and 
+ng-include directives inside your program. -->
+<!DOCTYPE html>
+<html ng-app="myApp"> <!-- ng-app initializes the AngularJS application -->
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Data Binding and Directives Example</title>
+
+    <!-- Load AngularJS from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-init="studentName='John'; newStudent=''; students=['Alice', 'Bob', 'Charlie']">
+<!-- ng-init is used to initialize values like studentName and students array -->
+
+    <div ng-controller="MainController">
+        
+        <!-- ng-model binds input field with the studentName variable -->
+        <h2>Two-Way Data Binding with ng-model</h2>
+        <input type="text" ng-model="studentName" placeholder="Enter name"/>
+        <p>Hello, {{ studentName }}!</p> <!-- Live display of studentName -->
+
+        <hr>
+
+        <h2>Add Student</h2>
+        <!-- Input for adding a new student, bound with newStudent -->
+        <input type="text" ng-model="newStudent" placeholder="Enter new student name"/>
+        <button ng-click="addStudent()">Add</button> <!-- Button triggers addStudent() -->
+
+        <hr>
+
+        <h2>Student List using ng-repeat</h2>
+        <ul>
+            <!-- ng-repeat iterates over each item in students array -->
+            <li ng-repeat="student in students track by $index">{{ $index + 1 }}. {{ student }}</li>
+        </ul>
+
+        <hr>
+
+        <h2>Included Template using ng-include</h2>
+        <!-- ng-include brings content from an external HTML file -->
+        <div ng-include="'student-list.html'"></div>
+
+    </div>
+
+    <!-- Define AngularJS Module and Controller -->
+    <script>
+        // Create AngularJS module named 'myApp'
+        var app = angular.module('myApp', []);
+
+        // Define controller 'MainController'
+        app.controller('MainController', function($scope) {
+
+            // Function to add a new student to the list
+            $scope.addStudent = function() {
+                if ($scope.newStudent.trim() !== '') {
+                    $scope.students.push($scope.newStudent.trim()); // Add new student
+                    $scope.newStudent = ''; // Reset input field
+                }
+            };
+        });
+    </script>
+
+</body>
+</html>

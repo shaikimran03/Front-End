@@ -1,0 +1,54 @@
+<!--3. Program to show various http methods like get(),post() and properties like .config, 
+.data, .status. -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS HTTP Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="HttpExampleController">
+
+  <h2>AngularJS HTTP Methods Example</h2>
+
+  <button ng-click="makeGetRequest()">Make GET Request</button>
+  <button ng-click="makePostRequest()">Make POST Request</button>
+
+  <h3>Response Details:</h3>
+  <p><strong>Status:</strong> {{response.status}}</p>
+  <p><strong>Data:</strong> {{response.data}}</p>
+  <p><strong>Config (URL):</strong> {{response.config.url}}</p>
+
+  <script>
+    angular.module('myApp', [])
+      .controller('HttpExampleController', function($scope, $http) {
+
+        $scope.response = {};
+
+        $scope.makeGetRequest = function() {
+          $http.get('https://jsonplaceholder.typicode.com/posts/1')
+            .then(function(response) {
+              $scope.response = response;
+            }, function(error) {
+              $scope.response = error;
+            });
+        };
+
+        $scope.makePostRequest = function() {
+          const postData = {
+            title: 'foo',
+            body: 'bar',
+            userId: 1
+          };
+
+          $http.post('https://jsonplaceholder.typicode.com/posts', postData)
+            .then(function(response) {
+              $scope.response = response;
+            }, function(error) {
+              $scope.response = error;
+            });
+        };
+      });
+  </script>
+
+</body>
+</html>

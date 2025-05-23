@@ -1,0 +1,28 @@
+<!-- 2. Understand a module and program to include a directive and a controller inside a 
+module from external js file. -->
+
+<!DOCTYPE html>
+<html ng-app="myApp"> <!-- ng-app initializes the AngularJS application -->
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Module, Controller, and Directive Example</title>
+
+    <!-- Load AngularJS from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Load external JavaScript file that contains the module, controller, and directive -->
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <!-- Attach the controller to this part of the DOM -->
+    <div ng-controller="MainController">
+        <!-- Display the message defined in the controller -->
+        <h2>{{ message }}</h2>
+
+        <!-- Use the custom directive defined in the external JS file -->
+        <custom-directive></custom-directive>
+    </div>
+
+</body>
+</html>

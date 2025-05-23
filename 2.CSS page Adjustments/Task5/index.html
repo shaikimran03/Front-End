@@ -1,0 +1,40 @@
+<!--5. A page with multiple background images for an webpage or element and define their 
+adjustable sizes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multiple Background Images Example</title>
+<style>
+  body {
+    /* Apply 3 background images */
+    background-image: 
+      url('R.jpg'), 
+      url('R.jpg'), 
+      url('R.jpg');
+
+    /* Position each background image */
+    background-position: 
+      top left, 
+      center center, 
+      bottom right;
+
+    /* Set the size of each background image */
+    background-size: 
+      150px 150px,  /* size for Image1 */
+      100px 100px,  /* size for Image2 */
+      50px 50px;    /* size for Image3 */
+
+    /* Prevent images from repeating */
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    /* For better visibility */
+    height: 100vh;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+</body>
+</html>

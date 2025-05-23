@@ -1,0 +1,47 @@
+<!--1. Write a program to evaluate expressions using {{ and }}. Create a text box and 
+change the background of text box when we give a color value. -->
+<!-- This HTML file demonstrates the use of AngularJS expressions to change the background color of a textbox based on user input. -->  
+<!-- It uses AngularJS to bind the input value to the background color dynamically. -->
+ 
+<!DOCTYPE html>
+
+<html ng-app="colorApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Expression and Dynamic Background</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .input-box {
+            width: 200px;
+            height: 30px;
+            font-size: 16px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="ColorController">
+
+    <h2>AngularJS Expression and Background Color Example</h2>
+
+    <p>Enter a color name (like "red", "blue", "yellow", "green") or hex code (e.g., #ff0000):</p>
+    
+    <!-- Textbox with dynamic background color -->
+    <input type="text" ng-model="bgColor" 
+           ng-style="{'background-color': bgColor}" 
+           class="input-box" placeholder="Type a color"/>
+
+    <p>You typed: <strong>{{ bgColor }}</strong></p>
+
+    <!-- Show a message with the current expression -->
+    <p>Expression Result (in real-time): <span ng-style="{'color': bgColor}">{{ bgColor }}</span></p>
+
+    <script>
+        angular.module('colorApp', [])
+            .controller('ColorController', function($scope) {
+                $scope.bgColor = '';
+            });
+    </script>
+
+</body>
+</html>

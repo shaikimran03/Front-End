@@ -1,0 +1,31 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Marquee Styling */
+marquee {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Iframe Styling */
+iframe {
+    border-radius: 5px;
+}

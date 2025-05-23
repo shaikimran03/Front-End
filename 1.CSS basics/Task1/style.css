@@ -1,0 +1,38 @@
+/* ====== General Page Styles ====== */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, readable font */
+    background-color: #f4f4f4;      /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== Header Styles ====== */
+h1 {
+    color: #333;                  /* Dark text for heading */
+    text-align: center;          /* Centered text */
+    margin-top: 20px;            /* Spacing from top */
+}
+
+/* ====== Box Container Styles ====== */
+.box {
+    background-color: white;     /* White background for the box */
+    width: 60%;                  /* Box width relative to page */
+    margin: 20px auto;           /* Center the box horizontally */
+    padding: 20px;               /* Padding inside the box */
+    border-radius: 10px;         /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* ====== Input Field Styles ====== */
+input[type="text"] {
+    width: 100%;                 /* Full-width input */
+    padding: 10px;               /* Padding inside input */
+    margin-top: 10px;            /* Spacing above input */
+    border: 1px solid #ccc;      /* Light gray border */
+    border-radius: 5px;          /* Slightly rounded edges */
+}
+
+/* ====== Paragraph Text Styles ====== */
+p {
+    color: #555;                 /* Medium gray text */
+}

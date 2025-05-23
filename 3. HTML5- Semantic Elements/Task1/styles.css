@@ -1,0 +1,33 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Styling for div elements */
+.header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styling for span elements */
+.highlight {
+    font-weight: bold;
+    color: #dc3545;
+}

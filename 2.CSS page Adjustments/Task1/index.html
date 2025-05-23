@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: background-color 0.5s ease-in-out;
+        }
+        table {
+            width: 50%;
+            margin: 50px auto;
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #444;
+            color: white;
+        }
+        td {
+            background-color: #f5f5f5;
+        }
+        /* This makes the body change color when hovering over the table */
+        body:hover {
+            background-color: #ffcccb;
+        }
+        /* Optional: Change table color when hovering */
+        table:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Table with Hover Effect</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>30</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Raj Kumar</td>
+            <td>28</td>
+            <td>India</td>
+        </tr>
+    </table>
+
+</body>
+</html>

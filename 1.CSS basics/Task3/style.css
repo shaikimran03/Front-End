@@ -1,0 +1,46 @@
+/* ===== Reset default spacing ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    height: 100vh;             /* Full viewport height */
+}
+
+/* ===== Box with 4 different border styles ===== */
+.border-box {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+
+    /* Top border: solid red, 5px */
+    border-top: 5px solid red;
+
+    /* Right border: dashed green, 4px */
+    border-right: 4px dashed green;
+
+    /* Bottom border: dotted blue, 6px */
+    border-bottom: 6px dotted blue;
+
+    /* Left border: double orange, 8px */
+    border-left: 8px double orange;
+
+    /* Optional aesthetics */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* ===== Responsive Font ===== */
+h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+}

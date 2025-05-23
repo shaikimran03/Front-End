@@ -1,0 +1,112 @@
+<!-- 
+2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use 
+different types of display for an element (display: none, inline, block, contents, list-item) -->
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Visibility & Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 250px;
+            height: 60px;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Visibility Examples */
+        .hidden {
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
+        .collapse {
+            visibility: collapse; /* Works best for table elements */
+        }
+
+        /* Display Examples */
+        .none {
+            display: none;
+        }
+        .inline {
+            display: inline;
+            border: 2px solid blue;
+        }
+        .block {
+            display: block;
+            background-color: lightgray;
+        }
+        .contents {
+            display: contents; /* Removes the wrapper but keeps child elements */
+        }
+        .list-item {
+            display: list-item; /* Acts like a list item */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                max-width: 80%;
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Visibility & Display</h1>
+
+    <div class="container">
+        <div class="box visible">Visible Box (Normal)</div>
+        <div class="box hidden">Hidden Box (Still occupies space)</div>
+        <div class="box collapse">Collapse Box (For table elements)</div>
+    </div>
+
+    <div class="container">
+        <div class="box none">None Box (Completely removed from layout)</div>
+        <div class="box inline">Inline Box (Behaves like inline text)</div>
+        <div class="box block">Block Box (Default for div)</div>
+        <div class="box contents">Contents Box (Wrapper disappears)</div>
+        <div class="box list-item">List Item Box (Behaves like a list item)</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--2. Create an array consisting of fruits names and when we click on a button sort it in 
+descending order. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Fruits in Descending Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    #output {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click the Button to Sort Fruits in Descending Order</h2>
+
+  <!-- Button to trigger sorting -->
+  <button onclick="sortFruits()">Sort Fruits</button>
+
+  <!-- Display result -->
+  <div id="output"></div>
+
+  <script>
+    // Array of fruit names
+    let fruits = ["Banana", "Apple", "Mango", "Orange", "Pineapple", "Grapes"];
+
+    // Function to sort in descending order
+    function sortFruits() {
+      // Sort descending using compare function
+      fruits.sort(function(a, b) {
+        return b.localeCompare(a);
+      });
+
+      // Display result
+      document.getElementById("output").innerHTML = "Sorted Fruits: " + fruits.join(", ");
+    }
+  </script>
+
+</body>
+</html>

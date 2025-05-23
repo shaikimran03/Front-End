@@ -1,0 +1,96 @@
+<!--4. Use pseudo classes and elements into your webpage 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pseudo-classes and Pseudo-elements Demo</title>
+
+  <style>
+    /* Base styles */
+    body {
+      font-family: Verdana, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    /* Link styles with pseudo-classes */
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s;
+      outline: none;
+    }
+
+    a:hover {
+      color: #e74c3c; /* Change color on hover */
+    }
+
+    a:focus {
+      outline: 2px dashed #e67e22; /* Outline on keyboard focus */
+    }
+
+    /* List styling */
+    ul {
+      list-style: none; /* Remove default bullets */
+      padding: 0;
+    }
+
+    /* Using pseudo-elements to add custom bullets */
+    ul li::before {
+      content: "✔ "; /* Checkmark before each list item */
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Highlight every even list item with pseudo-class */
+    ul li:nth-child(even) {
+      background-color: #d6eaf8;
+    }
+
+    ul li {
+      padding: 8px 12px;
+      margin: 4px 0;
+      background-color: white;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    /* Add a "New" badge after certain list items */
+    ul li.new::after {
+      content: "NEW";
+      color: white;
+      background-color: #e74c3c;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Pseudo-classes and Pseudo-elements Example</h1>
+
+  <p>Hover over the <a href="#https://www.w3schools.com/html/">link</a> to see <code>:hover</code> effect, or focus it with keyboard (<kbd>Tab</kbd> key) to see <code>:focus</code>.</p>
+
+  <h2>Feature List</h2>
+  <ul>
+    <li>Easy to use</li>
+    <li class="new">Responsive Design</li>
+    <li>Cross-browser Support</li>
+    <li class="new">Accessibility Features</li>
+    <li>Customizable Themes</li>
+  </ul>
+
+</body>
+</html>

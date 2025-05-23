@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    border: 2px dashed black; /* Visualizing margin */
+}
+
+/* Adding padding and margin details */
+.box::before {
+    content: attr(data-info);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Different padding and margin values */
+.box1 {
+    background-color: #ff5733;
+    padding: 10px;
+    margin: 20px;
+}
+
+.box2 {
+    background-color: #33a1ff;
+    padding: 20px;
+    margin: 10px;
+}
+
+.box3 {
+    background-color: #33ff77;
+    padding: 30px;
+    margin: 5px;
+}
+
+/* Adding visual effect for padding */
+.box1::before { content: "Padding: 10px, Margin: 20px"; }
+.box2::before { content: "Padding: 20px, Margin: 10px"; }
+.box3::before { content: "Padding: 30px, Margin: 5px"; }

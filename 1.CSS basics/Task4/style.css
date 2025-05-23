@@ -1,0 +1,42 @@
+/* ===== Reset and base styles ===== */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Heading style ===== */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===== Box with fixed pixel dimensions ===== */
+.box-px {
+    width: 200px;               /* Fixed width of 200 pixels */
+    height: 150px;              /* Fixed height of 150 pixels */
+    background-color: #4caf50; /* Green background */
+    color: white;
+    display: flex;
+    justify-content: center;   /* Center text horizontally */
+    align-items: center;       /* Center text vertically */
+    margin: 20px auto;         /* Center box horizontally with vertical margin */
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ===== Box with relative percentage dimensions ===== */
+.box-percent {
+    width: 50%;                /* 50% of the parent/container width */
+    height: 30vh;              /* 30% of viewport height */
+    background-color: #2196f3; /* Blue background */
+    color: white;
+    display: flex;
+    justify-content: center;   /* Center text horizontally */
+    align-items: center;       /* Center text vertically */
+    margin: 20px auto;         /* Center box horizontally with vertical margin */
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ===== Responsive notes ===== */
+/* vh = viewport height, vw = viewport width */

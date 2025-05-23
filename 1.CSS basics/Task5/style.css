@@ -1,0 +1,78 @@
+/* ===== Base body styles ===== */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 30px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ===== Heading style ===== */
+.title {
+    font-size: 2.5em;          /* Large font size */
+    font-weight: bold;         /* Bold */
+    color: #2c3e50;            /* Dark blue-gray */
+    text-align: center;        /* Centered heading */
+    margin-bottom: 40px;
+}
+
+/* ===== Normal text ===== */
+.normal-text {
+    font-style: normal;        /* Normal font style */
+    font-weight: normal;       /* Normal weight */
+    font-size: 16px;           /* Default size */
+}
+
+/* Italicized text */
+.italic-text {
+    font-style: italic;        /* Italic font style */
+    font-size: 16px;
+}
+
+/* Bold text */
+.bold-text {
+    font-weight: bold;         /* Bold font weight */
+    font-size: 16px;
+}
+
+/* Bold and Italic text */
+.bold-italic-text {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Custom font-family */
+.custom-font {
+    font-family: "Courier New", Courier, monospace; /* Monospaced font */
+    font-size: 16px;
+}
+
+/* Larger font size */
+.large-text {
+    font-size: 24px;           /* Large font size */
+    font-weight: normal;
+}
+
+/* Colored text */
+.colored-text {
+    color: #008080;            /* Teal color */
+    font-size: 16px;
+}
+
+/* Center aligned text */
+.center-text {
+    text-align: center;        /* Center text */
+    font-size: 16px;
+}
+
+/* Right aligned text */
+.right-text {
+    text-align: right;         /* Right aligned */
+    font-size: 16px;
+}
+
+/* Left aligned text (default) */
+.left-text {
+    text-align: left;          /* Left aligned */
+    font-size: 16px;
+}
